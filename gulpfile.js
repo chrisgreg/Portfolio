@@ -51,3 +51,12 @@ gulp.task('default', function () {
 	gulp.start('images');
 	gulp.start('enrich');
 });
+
+gulp.task('watch', function() {
+	 gulp.watch([
+		 'src/*',
+		 'src/partials/*',
+		 'public/_sass/*',
+		 'public/js/*'
+	 ], ['default']);
+})

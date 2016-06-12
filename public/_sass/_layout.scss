@@ -120,27 +120,27 @@
         .name-title {
           border-bottom: 3px solid #40CCB3;
           text-transform: uppercase;
-          font-size: 38px;
+          font-size: 2.618rem;
           font-weight: 200;
 
           margin: 10px 0 10px 0;
         }
 
         .blurb {
-          font-size: 14px;
+          font-size: 1rem;
           font-weight: 500;
           color: #6F6F6F;
           line-height: 25px;
         }
 
         .type-wrap{
-          font-size: 28px;
+          font-size: 1.618rem;
           font-weight: 200;
         }
 
         .footer {
           padding-top: 100px;
-          font-size: 12px;
+          font-size: 0.618rem;
           display: inline-block;
           border-top:1px solid #40CCB3;
 
@@ -199,7 +199,7 @@
 
         .subheading {
           text-transform: uppercase;
-          font-size: 32px;
+          font-size: 1.618em;
           font-weight: 700;
           margin: 10px 0 10px 0;
           text-align: center;
@@ -218,151 +218,39 @@
 
 }
 
+@media (max-width: 600px) {
+  .main-page-content{
+    flex-direction: column;
+    text-align: center;
 
+    .side {
+      &.left-side {
+        width: 100%;
 
-/**
- * Site footer
- */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
-}
+        .content{
+          .blurb {
+            display: none;
+          }
+          .type-wrap {
+            font-size: 1.2rem;
+          }
+          .footer {
+            padding-top: 60%;
+            padding-bottom: 20%;
 
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
+            .social .icon {
+              margin: 5px 9px;
+            }
 
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
+            .copyright {
+              margin-top: 10px;
+            }
+          }
         }
+      }
+      &.right-side {
+        width: 100%;
+      }
     }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
+  }
 }
