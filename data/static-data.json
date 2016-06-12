@@ -1,0 +1,10 @@
+{
+    "pageTitle": "My Portfolio",
+    "fullName": "John Doe",
+    "bio": "Hey, this is my biography.",
+    "social": {
+      "twitter": "http://www.twitter.com/@ChrisGreg_",
+      "github": "http://www.github.com/chrisgreg",
+      "blog": "https://medium.com/@chrisgregori/"
+    }
+}
