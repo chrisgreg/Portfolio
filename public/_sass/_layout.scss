@@ -219,9 +219,33 @@
       }
     }
   }
+}
 
+td {
+  width: 90%;
+}
+
+table {
+    width: 100%;
+    font-size: 15px;
+    padding: 2%;
+}
+
+.education {
+  flex-direction: row !important;
+
+  .info {
+    width: 45%;
+    padding-right: 3%;
+  }
+  
+  .grades {
+    
+  }
 
 }
+
+
 
 @media (max-width: 600px) {
   .main-page-content{

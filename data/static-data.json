@@ -8,5 +8,15 @@
       "instagram": "https://www.instagram.com/chrisgregori__/",
       "github": "http://www.github.com/chrisgreg",
       "blog": "https://medium.com/@chrisgregori/"
-    }
+    },
+    "education": {
+          "course": "BSc (Hons) Software Engineering",
+          "university": "City University, London",
+          "date": {
+                "start": "September 2010",
+                "end": "July 2014"
+          },
+          "description": "A specialist focus on the programming and development of large and complex software, with an emphasis on dependable systems.",
+          "classification": "I Class Honours"
+    }   
 }
