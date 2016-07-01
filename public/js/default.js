@@ -7,6 +7,7 @@ $(function(){
          "Git | Jenkins | CI",
          "I like Node.js.",
          "I like Spring Boot.",
+         "I am learning Golang.",
          "I make iOS Apps.",
          "I blog."
          ],
