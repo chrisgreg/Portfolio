@@ -1,0 +1,25 @@
+<div id="work" class="content work">
+
+	<h2>Work Experience</h2>
+
+	{{#work}}
+		<div class="details">
+				<div class="description">
+					<h4>{{this.company}} - {{this.role}}</h4>
+					<h5>{{this.description}}</h5>
+				</div>
+
+				<table class="table project">
+						<tbody>
+							{{#projects}}
+								<tr>
+									<td class="name">{{this.name}}</td>
+									<td class="details">{{{this.description}}}</td>
+								</tr>
+							{{/projects}}
+						</tbody>
+				</table>
+			</div>
+	{{/work}}
+
+</div>

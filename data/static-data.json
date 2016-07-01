@@ -18,5 +18,87 @@
           },
           "description": "A specialist focus on the programming and development of large and complex software, with an emphasis on dependable systems.",
           "classification": "I Class Honours"
-    }   
+    },
+    "work": [
+          {
+            "company": "Net-a-Porter",
+            "role": "Graduate Software Engineer",
+            "description": "Graduate Software Engineering Scheme based on rotations in Software Testing, Software Development and Dev Ops. Exposing me to various technologies, including Java, Perl, Scala, Ruby, JavaScript and iOS development.",
+            "project_title": "Focus Points & Highlights",
+            "projects": [
+                 {
+                       "name": "Perl",
+                       "description": "Enhanced and maintained several core production backend applications in Perl 5 utilising PostgreSQL, DBIx and the Catalyst MVC Framework.<br>Built a new in-house admin tool as part of a two man team using Perl, Catalyst, ActiveMQ JMS, AJAX and PostgreSQL.<br><br>Source code managed using Git.<br><br>Projects managed in JIRA. ",
+                       "tech": [
+                             "Perl",
+                             "Catalyst",
+                             "PostgreSQL",
+                             "ActiveMQ JMS",
+                             "AJAX",
+                             "Linux",
+                             "Git"
+                       ]
+                 },
+                 {
+                       "name": "Java 8 / Spring",
+                       "description": "Worked on various areas of the Mr.Porter web application implementing RESTful API endpoints. <br><br>Integration with backend API's via POJO's, DAO's, Services and Circuit Breaker design pattern.",
+                       "tech": [
+                             "Java",
+                             "Gradle",
+                             "JSP",
+                             "MySQL"
+                       ]
+                 },
+                 {
+                       "name": "React",
+                       "description": "Lead the implementation of a React based user-generated-content and product details page <a href='https://www.thenetset.com/i/576433e16700003600d5f217'>Example page</a>.",
+                       "tech": [
+                             "Node.js",
+                             "React.js",
+                             "ES6",
+                             "JavaScript",
+                             "Webpack",
+                             "Grunt"
+                       ]
+                 },
+                 {
+                       "name": "Responsive SASS / Styling",
+                       "description": "Worked on various areas of the Mr.Porter site furniture, adding mobile-first responsive CSS for tablet and desktop versions.<br><br>Refactored javascript to updated best practises. ",
+                       "tech": [
+                             "Node.js",
+                             "CSS",
+                             "SASS",
+                             "JavaScript"
+                       ]
+                 },
+                 {
+                       "name": "Ruby Automation",
+                       "description": "Worked with automation testers to enhance, maintain and improve a BDD Ruby Gherkin Test suite used to frequently test core applications by writing gherkin scripts and native ruby code.",
+                       "tech": [
+                             "Ruby",
+                             "Cucumber",
+                             "Capybara",
+                             "Site Prism"
+                       ]
+                 }
+            ]
+          },
+          {
+            "company": "Net-a-Porter",
+            "role": "Graduate Software Engineer",
+            "description": "Graduate Software Engineering Scheme based on rotations in Software Testing, Software Development and Dev Ops. Exposing me to various technologies, including Java, Perl, Scala, Ruby, JavaScript and iOS development.",
+            "projects": [
+                 {
+                       "name": "Perl",
+                       "description": "Enhanced and maintained several core production backend applications in Perl 5 utilising PostgreSQL, DBIx and the Catalyst MVC Framework.",
+                       "tech": [
+                             "Perl",
+                             "Catalyst",
+                             "PostgreSQL"
+                       ]
+                 }
+            ]
+          }
+
+    ]
 }
