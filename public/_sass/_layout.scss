@@ -191,7 +191,7 @@
       background: -webkit-linear-gradient(to left, #4CB8C4 , #3CD3AD);
       background: linear-gradient(to left, #4CB8C4 , #3CD3AD);
       width: 61.8%;
-      overflow: scroll;
+      overflow-y: scroll;
       height: 100vh;
 
       .content {
