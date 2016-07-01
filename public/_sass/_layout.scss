@@ -172,6 +172,9 @@
               &.github {
                 background-image: url("../images/svg-icons/41-github.svg");
               }
+              &.medium {
+                background-image: url("../images/svg-icons/53-medium.svg");
+              }
             }
           }
 
@@ -188,6 +191,8 @@
       background: -webkit-linear-gradient(to left, #4CB8C4 , #3CD3AD);
       background: linear-gradient(to left, #4CB8C4 , #3CD3AD);
       width: 61.8%;
+      overflow: scroll;
+      height: 100vh;
 
       .content {
         display: flex;
@@ -239,7 +244,7 @@
             padding-bottom: 20%;
 
             .social .icon {
-              margin: 5px 9px;
+              margin: 5px 5px;
             }
 
             .copyright {

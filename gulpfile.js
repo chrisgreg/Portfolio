@@ -53,10 +53,13 @@ gulp.task('default', function () {
 });
 
 gulp.task('watch', function() {
-	 gulp.watch([
+	gulp.start('default');
+
+	gulp.watch([
 		 'src/*',
 		 'src/partials/*',
 		 'public/_sass/*',
 		 'public/js/*'
-	 ], ['default']);
+  ], ['default']);
+
 })

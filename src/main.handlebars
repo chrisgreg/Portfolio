@@ -18,7 +18,7 @@
             Full-stack Software Engineer living in London. <br><br>
             Love working on fun projects with fun people.
             <br>
-            <br> <a href="mailto:{{site.email}}">Contact me </a> if you'd like to know more.<br>
+            <br> <a href="mailto:{{contactMe}}">Contact me </a> if you'd like to know more.<br>
           </div>
 
           <div class="type-wrap">
@@ -28,10 +28,11 @@
 
           <div class="footer">
             <div class="social">
-              <a class="facebook icon" href="{{site.facebooklink}}"></a>
+              <a class="facebook icon" href="{{social.facebook}}"></a>
               <a class="twitter icon" href="{{social.twitter}}"></a>
-              <a class="linked-in icon" href="{{site.linkedin_link}}"></a>
-              <a class="instagram icon" href="{{site.instagram_link}}"></a>
+              <a class="linked-in icon" href="{{social.linkedIn}}"></a>
+              <a class="instagram icon" href="{{social.instagram}}"></a>
+              <a class="medium icon" href="{{social.blog}}"></a>
               <a class="github icon" href="{{social.github}}"></a>
             </div>
             <div class="copyright">
@@ -44,31 +45,7 @@
 
       <div class="right-side side">
 
-        <div class="content">
-          <h2 class="subheading">
-            Education
-          </h2>
-          <h2 class="subheading">
-            .
-          </h2>
-          <h2 class="subheading">
-            Experience
-          </h2>
-          <h2 class="subheading">
-            .
-          </h2>
-          <h2 class="subheading">
-            Projects
-          </h2>
-          <h2 class="subheading">
-            .
-          </h2>
-          <h2 class="subheading">
-            <a href="{{social.blog}}">Blog</a>
-          </h2>
-
-
-        </div>
+       {{> links}}
 
       </div>
 

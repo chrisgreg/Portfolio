@@ -1,9 +1,11 @@
 {
-    "pageTitle": "My Portfolio",
-    "fullName": "John Doe",
-    "bio": "Hey, this is my biography.",
+    "pageTitle": "Chris Gregori",
+    "contactMe": "chrisgreg23@googlemail.com",
     "social": {
-      "twitter": "http://www.twitter.com/@ChrisGreg_",
+      "facebook": "https://www.facebook.com/chris.gregori.9",
+      "twitter": "http://www.twitter.com/@_ChrisGreg",
+      "linkedIn": "https://www.linkedin.com/in/chrisgregori",
+      "instagram": "https://www.instagram.com/chrisgregori__/",
       "github": "http://www.github.com/chrisgreg",
       "blog": "https://medium.com/@chrisgregori/"
     }
