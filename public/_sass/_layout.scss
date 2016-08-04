@@ -1,307 +1,66 @@
-/**
- * Site header
- */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+#main {
+  width: 100%;
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
-
-.site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
-}
-
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
-}
-
-/**
-* Main Page Content
-*/
-
-.main-page-content {
-  display: flex;
-  min-height: 100vh;
-  font-family: 'Lato';
-  letter-spacing: 0.2px;
-
-  a{
-    color: #40CCB3;
-    font-weight: 700;
-  }
-
-  .side {
-
-    &.left-side {
-      width:38.2%;
-
-      .content {
-        padding: 0% 20%;
-        color: #A5A5A5;
-        margin-top: 40%;
-
-        .name-title {
-          border-bottom: 3px solid #40CCB3;
-          text-transform: uppercase;
-          font-size: 2.618rem;
-          font-weight: 200;
-
-          margin: 10px 0 10px 0;
-        }
-
-        .blurb {
-          font-size: 1rem;
-          font-weight: 500;
-          color: #6F6F6F;
-          line-height: 25px;
-        }
-
-        .type-wrap{
-          font-size: 1.618rem;
-          font-weight: 200;
-        }
-
-        .footer {
-          padding-top: 100px;
-          font-size: 0.618rem;
-          display: inline-block;
-          border-top:1px solid #40CCB3;
-
-          .social {
-            display: inline-block;
-
-            a {
-              display: inline-block;
-              height: 25px;
-              width: 25px;
-
-              margin: 0 3px;
-              background-size: 18px;
-              background-repeat: no-repeat;
-              background-position: 0 7px;
-
-              &.facebook {
-                background-image: url("../images/svg-icons/06-facebook.svg");
-              }
-              &.twitter {
-                background-image: url("../images/svg-icons/03-twitter.svg");
-              }
-              &.linked-in {
-                background-image: url("../images/svg-icons/11-linkedin.svg");
-              }
-              &.instagram {
-                background-image: url("../images/svg-icons/38-instagram.svg");
-              }
-              &.github {
-                background-image: url("../images/svg-icons/41-github.svg");
-              }
-              &.medium {
-                background-image: url("../images/svg-icons/53-medium.svg");
-              }
-            }
-          }
-
-          .copyright {
-            display: inline-block;
-            margin-top:-5px;
-            vertical-align: text-top;
-          }
-        }
-      }
-    }
-
-    &.right-side {
-      background: -webkit-linear-gradient(to left, #4CB8C4 , #3CD3AD);
-      background: linear-gradient(to left, #4CB8C4 , #3CD3AD);
-      width: 61.8%;
-      overflow-y: scroll;
-      height: 100vh;
-
-      .content {
-        display: flex;
-        flex-direction: column;
-        color: white;
-        min-height: 100vh;
-        justify-content: center;
-        align-items: center;
-
-        .subheading {
-          text-transform: uppercase;
-          font-size: 1.618em;
-          font-weight: 700;
-          margin: 10px 0 10px 0;
-          text-align: center;
-
-          a {
-            color: white;
-            &:hover {
-              color: grey;
-            }
-          }
-        }
-
-        &.education {
-          flex-direction: row !important;
-
-          .info {
-            width: 45%;
-            padding-right: 3%;
-          }
-        }
-
-        &.work {
-          .details {
-            width: 90%;
-          }
-
-          .project {
-            margin: 0 auto;
-
-            td {
-              width: 5%;
-              vertical-align: top;
-
-              &.name {
-                text-align: center;
-                width:20%;
-              }
-
-              &.details {
-                width: 80%;
-              }
-            }
-          }
-        }
-
-      }
-    }
-  }
-}
-
-td {
-  width: 90%;
-}
-
-table {
+  .header {
     width: 100%;
-    font-size: 15px;
-    padding: 2%;
+
+    #side-nav-toggle-button {
+      float: right;
+      width: 30px;
+      margin: 30px 70px;
+    }
+  }
+
 }
 
 
 
+/* The side navigation menu */
+.side-nav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the side-nav */
+}
 
+/* The navigation menu links */
+.side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
 
-@media (max-width: 600px) {
-  .main-page-content{
-    flex-direction: column;
-    text-align: center;
+/* When you mouse over the navigation links, change their color */
+.side-nav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
 
-    .side {
-      &.left-side {
-        width: 100%;
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
 
-        .content{
-          .blurb {
-            display: none;
-          }
-          .type-wrap {
-            font-size: 1.2rem;
-          }
-          .footer {
-            padding-top: 60%;
-            padding-bottom: 20%;
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
 
-            .social .icon {
-              margin: 5px 5px;
-            }
-
-            .copyright {
-              margin-top: 10px;
-            }
-          }
-        }
-      }
-      &.right-side {
-        width: 100%;
-      }
-    }
-  }
+/* On smaller screens, where height is less than 450px, change the style of the side-nav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .side-nav {padding-top: 15px;}
+    .side-nav a {font-size: 18px;}
 }

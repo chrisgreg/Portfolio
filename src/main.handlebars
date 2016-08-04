@@ -4,12 +4,16 @@
   {{> header}}
 
   <body>
+    <div id="main" class="main-page-content">
 
-    <div class="main-page-content">
+      <div class="header">
+        <img id="side-nav-toggle-button" src="images/hamburger.svg"></img>
+      </div>
 
       <div class="left-side side">
 
         <div class="content">
+
           <h1 class="name-title">
             Chris Gregori
           </h1>
@@ -42,19 +46,11 @@
 
         </div>
       </div>
-
-      <div class="right-side side">
-
-       {{> links}}
-       
-       {{> education}}
-       
-       {{> work}}
-
-      </div>
-
     </div>
 
+    <div id="side-nav" class="side-nav">
+      {{> links}}
+    </div>
 
 
   </body>
