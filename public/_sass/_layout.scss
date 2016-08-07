@@ -1,7 +1,10 @@
 //CORE
 
+* {
+  font-family: $base-font-family;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: $base-font-family;
     letter-spacing: 0.08rem;
     color: #373737;
     font-weight: 700;
@@ -36,7 +39,7 @@ a {
     #side-nav-toggle-button {
       float: right;
       width: 30px;
-      margin: 30px 70px;
+      margin: 40px 70px;
     }
   }
 }
@@ -62,15 +65,18 @@ a {
   h1 {
     font-size: 2.3rem;
     margin-bottom: 10px;
-    padding-top: 15px;
+    padding-top: 10px;
   }
   h2 {
     font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   a {
     font-size: 1.6rem;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -84,10 +90,34 @@ a {
     z-index: 1; /* Stay on top */
     top: 0;
     right: 0;
-    background-color: #111; /* Black*/
+    background-color: #f1f1f1; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 30px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the side-nav */
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ul {
+      list-style: none;
+      padding-left: 10px;
+
+      &.secondary-links {
+        margin-bottom: 70px;
+        li > a {
+          font-size: 1.4rem;
+          color: #818181;
+
+          &:hover {
+            color: #25ae69;
+          }
+        }
+      }
+    }
+
+
 }
 
 /* The navigation menu links */
@@ -95,14 +125,14 @@ a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #505050;
     display: block;
     transition: 0.3s
 }
 
 /* When you mouse over the navigation links, change their color */
 .side-nav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #25ae69;
 }
 
 /* Position and style the close button (top right corner) */
