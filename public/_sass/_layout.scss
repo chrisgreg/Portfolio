@@ -1,3 +1,32 @@
+//CORE
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $base-font-family;
+    letter-spacing: 0.08rem;
+    color: #373737;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h1 {
+  font-size:3rem;
+  letter-spacing:0;
+  line-height: 2.2rem;
+  color: black;
+}
+
+h2 {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  color: gray;
+}
+
+a {
+  color: #25ae69;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 #main {
   width: 100%;
 
@@ -10,7 +39,39 @@
       margin: 30px 70px;
     }
   }
+}
 
+.content {
+  display: flex;
+}
+
+
+.blurb {
+  display: flex;
+  margin: 350px auto;
+
+  .details {
+    padding-left:14px;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 175px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    padding-top: 15px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  a {
+    font-size: 1.6rem;
+  }
 }
 
 
@@ -56,7 +117,6 @@
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
-    padding: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the side-nav (less padding and a smaller font size) */

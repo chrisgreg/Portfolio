@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  {{> header}}
+  {{> head}}
 
   <body>
     <div id="main" class="main-page-content">
@@ -10,25 +10,35 @@
         <img id="side-nav-toggle-button" src="images/hamburger.svg"></img>
       </div>
 
-      <div class="left-side side">
 
         <div class="content">
 
-          <h1 class="name-title">
-            Chris Gregori
-          </h1>
+
+
 
           <div class="blurb">
-            Full-stack Software Engineer living in London. <br><br>
-            Love working on fun projects with fun people.
-            <br>
-            <br> <a href="mailto:{{contactMe}}">Contact me </a> if you'd like to know more.<br>
+            <div class="image">
+              <img src="images/me2.jpg" />
+            </div>
+            <div class="details">
+              <h1>Chris Gregori</h1>
+              <h2>Full-stack Software Engineer</h2>
+              <h3>
+                <a href="#">
+                  @_chrisgreg
+                </a>
+              </h3>
+              <h3>
+                <div class="type-wrap">
+                  <div id="typed-strings"></div>
+                  <span id="typed" style="white-space:pre;"></span>
+                </div>
+              </h3>
+              <!-- <br> <a href="mailto:{{contactMe}}">Contact me </a> if you'd like to know more.<br> -->
+            </div>
           </div>
 
-          <div class="type-wrap">
-              <div id="typed-strings"></div>
-              <span id="typed" style="white-space:pre;"></span>
-          </div>
+
 
           <div class="footer">
             <div class="social">
@@ -39,13 +49,14 @@
               <a class="medium icon" href="{{social.blog}}"></a>
               <a class="github icon" href="{{social.github}}"></a>
             </div>
-            <div class="copyright">
+            <!-- <div class="copyright">
               © 2016 by Chris Gregori
-            </div>
+            </div> -->
           </div>
 
+
         </div>
-      </div>
+
     </div>
 
     <div id="side-nav" class="side-nav">
