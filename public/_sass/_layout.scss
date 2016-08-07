@@ -37,9 +37,9 @@ a {
     width: 100%;
 
     #side-nav-toggle-button {
-      float: right;
       width: 30px;
-      margin: 40px 70px;
+      margin-left: 95%;
+      margin-top: 40px;
     }
   }
 }
@@ -116,8 +116,6 @@ a {
         }
       }
     }
-
-
 }
 
 /* The navigation menu links */
@@ -148,6 +146,52 @@ a {
 #main {
     transition: margin-left .5s;
 }
+
+.education {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  .info {
+    width: 600px;
+    margin-right: 20px;
+  }
+
+  .grades {
+
+    table {
+      margin-top: 8px;
+      margin-bottom: 30px;
+    }
+
+    .year-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    tr {
+      td:first-child {
+        width: 350px;
+        padding-left: 10px;
+      }
+    }
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* On smaller screens, where height is less than 450px, change the style of the side-nav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {

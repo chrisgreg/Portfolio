@@ -39,7 +39,12 @@ gulp.task('enrich', function(){
 		}
 	}
 
-	return gulp.src('src/main.handlebars')
+	gulp.src('src/education.handlebars')
+		.pipe(handlebars(staticData, options))
+		.pipe(rename('education.html'))
+		.pipe(gulp.dest('dist'));
+
+	gulp.src('src/main.handlebars')
 		.pipe(handlebars(staticData, options))
 		.pipe(rename('index.html'))
 		.pipe(gulp.dest('dist'));
