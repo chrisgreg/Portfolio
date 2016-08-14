@@ -44,6 +44,11 @@ gulp.task('enrich', function(){
 		.pipe(rename('education.html'))
 		.pipe(gulp.dest('dist'));
 
+	gulp.src('src/experience.handlebars')
+		.pipe(handlebars(staticData, options))
+		.pipe(rename('experience.html'))
+		.pipe(gulp.dest('dist'));
+
 	gulp.src('src/main.handlebars')
 		.pipe(handlebars(staticData, options))
 		.pipe(rename('index.html'))
