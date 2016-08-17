@@ -11,6 +11,13 @@
 }
 
 .side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  height: 100%;
+  background: #f3f3f3;
+
   .blurb {
     display: flex;
     padding-top:50px;
@@ -18,6 +25,7 @@
     .image {
       img {
         width:115px;
+        border-radius: 40%;
       }
     }
 
@@ -25,22 +33,60 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
+      text-transform: uppercase;
+      padding-left:20px;
 
       h1 {
         font-size: 2.3rem;
         padding-top: 5px;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        color: #6d6d6d;
+        font-weight: 400;
       }
 
       h2 {
         text-transform: uppercase;
-        font-size:2rem;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        color: gray;
       }
 
       h3 {
-        font-size:2rem;
+        font-size:1.6rem;
+        letter-spacing: 1px;
+        color: #00a700;
+      }
+    }
+  }
+
+  .links {
+    width: 70%;
+    padding-top:30px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        color: #00a700;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      border-top: 1px solid #d0d0d0;
+      padding: 10px 0px 0px 15px;
+      letter-spacing: 2px;
+      color: #676767;
+      font-size: 1.3rem;
+
+      &:last-child {
+        border-bottom: 1px solid #d0d0d0;
+        padding-bottom:8px;
       }
     }
   }
