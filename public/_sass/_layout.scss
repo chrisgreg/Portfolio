@@ -10,6 +10,16 @@
   height: 100%;
 }
 
+a:hover {
+    color: #05a805;
+    text-decoration: underline;
+}
+
+a {
+    color: #05a805;
+    text-decoration: none;
+}
+
 .side-bar {
   display: flex;
   flex-direction: column;
@@ -17,6 +27,8 @@
   padding-top: 50px;
   height: 100%;
   background: #f3f3f3;
+  position: fixed;
+  padding-left: 17%;
 
   .blurb {
     display: flex;
@@ -87,6 +99,110 @@
       &:last-child {
         border-bottom: 1px solid #d0d0d0;
         padding-bottom:8px;
+      }
+    }
+  }
+}
+
+.content {
+  margin-left:50%;
+}
+
+
+.primary-content {
+    padding-top:9%;
+
+    h1 {
+      text-transform: uppercase;
+      border-bottom: 1px solid #71cd71;
+      margin-right: 16%;
+    }
+    h5 {
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid #71cd71;
+      padding-bottom: 4px;
+    }
+
+    &.work {
+      .description {
+        h4 {
+          border-bottom: none;
+          margin-bottom:0;
+        }
+        h5 {
+          font-size:1.6rem;
+          color: gray;
+        }
+      }
+
+      .keyskills {
+        margin-bottom:0;
+        font-size: 1.5rem;
+      }
+
+      .details {
+        h4 span {
+          border-bottom: 1px solid #71cd71;
+          padding-bottom: 3px;
+        }
+        :first-child {
+          padding-top: 5px;
+        }
+        padding-bottom:40px;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .tech {
+        columns: 3;
+        list-style-type: disc;
+      }
+
+      li {
+        margin-bottom: 0;
+        p {
+          font-size: 1.3rem;
+          margin-bottom: 0;
+        }
+      }
+
+    }
+
+
+
+
+}
+
+.education {
+  h6 {
+    font-size: 1.4rem;
+  }
+
+  .no-bottom {
+    margin-bottom: 0;
+  }
+
+  .grades {
+    padding-top: 2%;
+
+    .year-title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid #71cd71;
+      padding-bottom: 4px;
+    }
+
+    table {
+      width: 100%;
+
+      td {
+        width: 100%;
       }
     }
   }

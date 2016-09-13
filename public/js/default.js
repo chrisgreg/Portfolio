@@ -3,14 +3,14 @@ $(function(){
     $("#typed").typed({
         strings: [
          "I am a full stack developer.",
-         "Java 8 | Node.js | Swift",
+         "Node.js | Java 8 | Swift",
          "React.js | Vue.js | ES6",
          "Git | Jenkins | CI",
          "I like Node.js.",
-         "I like Spring Boot.",
          "I am learning Golang.",
          "I make iOS Apps.",
-         "I blog."
+         "I blog.",
+         "I take photos."
          ],
         typeSpeed: 45,
         backDelay: 400,

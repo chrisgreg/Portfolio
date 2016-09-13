@@ -1,0 +1,38 @@
+<div id="work" class="primary-content work">
+
+	<h1>Work & Experience</h1>
+
+	{{#work}}
+		<div class="details">
+				<div class="description">
+					<h4><span>{{this.company}} - {{this.role}}</span></h4>
+					<h5><b>{{this.date.start}} - {{this.date.end}}</b></h5>
+					<p>{{this.description}}</p>
+				</div>
+
+				<h5 class="keyskills">Key Projects, Skills & Highlights</h5>
+				<ul>
+					{{#projects}}
+						<li>
+							<p>
+								{{{this.description}}}
+							</p>
+						</li>
+					{{/projects}}
+				</ul>
+
+				<h5 class="keyskills">Languages, Frameworks & Tools</h5>
+				<ul class="tech">
+					{{#tech}}
+						<li>
+							<p>
+								{{{this}}}
+							</p>
+						</li>
+					{{/tech}}
+				</ul>
+
+			</div>
+	{{/work}}
+
+</div>

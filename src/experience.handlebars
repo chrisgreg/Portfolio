@@ -4,23 +4,42 @@
   {{> head}}
 
   <body>
-    <div id="main" class="main-page-content">
+    <div class="container full-height">
+      <div class="row full-size-row">
+        <div class="side-bar six columns">
+          <div class="blurb">
+            <div class="image">
+              <img src="images/avatar.png" />
+            </div>
+            <div class="details">
+              <h1>Chris Gregori</h1>
+              <h2>Full-Stack Software Engineer</h2>
+              <h3>
+                <div class="type-wrap">
+                  <div id="typed-strings"></div>
+                  <span id="typed" style="white-space:pre;"></span>
+                </div>
+              </h3>
+            </div>
+          </div>
+          <div class="links">
+            <ul>
+              <li><a href="index.html">Projects</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="">Photography</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </div>
 
-      <div class="header">
-        <img id="side-nav-toggle-button" src="images/hamburger.svg"></img>
+        </div>
+        <div class="five columns content">
+          {{> experience}}
+        </div>
       </div>
 
-      {{> work}}
 
     </div>
-
-    </div>
-
-    <div id="side-nav" class="side-nav">
-      {{> links}}
-    </div>
-
-
   </body>
 
 </html>

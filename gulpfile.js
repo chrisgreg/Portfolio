@@ -8,7 +8,7 @@ var rename = require('gulp-rename');
 var staticData = require('./data/static-data.json');
 
 gulp.task('sass', function() {
-	gulp.src(['public/_sass/*.scss', 'public/_sass/*.css'])
+	gulp.src(['public/_sass/*.css', 'public/_sass/*.scss'])
 				.pipe(concat('styles.css'))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('dist/css'));

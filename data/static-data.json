@@ -22,13 +22,57 @@
     "work": [
           {
             "company": "Net-a-Porter",
+            "role": "Associate Software Engineer",
+            "date": {
+              "start": "November 2015",
+              "end": "..."
+            },
+            "description": "Assosciate Full-Stack JavaScript Software Engineer primarily working on the NET-A-PORTER & Mr Porter sites - previously worked on The Outnet.com.",
+            "projects": [
+                 {
+                       "description": "Designed and implemented test-driven solutions for features on the Mr Porter and Net-a-Porter product listing and details applications utilising vanilla JavaScript, Polymer, React and Redux."
+                 },
+                 {
+                       "description": "Led the development of a new Vue.js client-side application for The Outnets My Account page."
+                 },
+                 {
+                       "description": "Worked as part of a two-man team to architect, design and implement a new authentication system for the entire company utilising JWT in Java 8."
+                 },
+                 {
+                       "description": "Redesigned The Outnet.com header."
+                 },
+                 {
+                       "description": "Won Fullstack 2016 hackday alongside two colleagues by creating a light-based theremin using a Tessel 2 dev kit."
+                 },
+                 {
+                       "description": "Contributed to multiple scripts, build tools and applications throughout the company."
+                 }
+            ],
+            "tech": [
+              "Node.js",
+              "React.js",
+              "Polymer",
+              "Vue.js",
+              "ES6",
+              "JavaScript",
+              "Java 8",
+              "JWT",
+              "SCSS"
+            ]
+          },
+          {
+            "company": "Net-a-Porter",
             "role": "Graduate Software Engineer",
+            "date": {
+              "start": "September 2014",
+              "end": "November 2015"
+            },
             "description": "Graduate Software Engineering Scheme based on rotations in Software Testing, Software Development and Dev Ops. Exposing me to various technologies, including Java, Perl, Scala, Ruby, JavaScript and iOS development.",
             "project_title": "Focus Points & Highlights",
             "projects": [
                  {
                        "name": "Perl",
-                       "description": "Enhanced and maintained several core production backend applications in Perl 5 utilising PostgreSQL, DBIx and the Catalyst MVC Framework.<br>Built a new in-house admin tool as part of a two man team using Perl, Catalyst, ActiveMQ JMS, AJAX and PostgreSQL.<br><br>Source code managed using Git.<br><br>Projects managed in JIRA. ",
+                       "description": "Enhanced and maintained several core production backend applications in Perl 5 utilising PostgreSQL, DBIx and the Catalyst MVC Framework. ",
                        "tech": [
                              "Perl",
                              "Catalyst",
@@ -40,8 +84,11 @@
                        ]
                  },
                  {
+                   "description": "Built a new in-house admin tool as part of a two man team using Perl, Catalyst, ActiveMQ JMS, AJAX and PostgreSQL."
+                 },
+                 {
                        "name": "Java 8 / Spring",
-                       "description": "Worked on various areas of the Mr.Porter web application implementing RESTful API endpoints. <br><br>Integration with backend API's via POJO's, DAO's, Services and Circuit Breaker design pattern.",
+                       "description": "Worked on various areas of the Mr.Porter web application implementing RESTful API endpoints.",
                        "tech": [
                              "Java",
                              "Gradle",
@@ -50,8 +97,11 @@
                        ]
                  },
                  {
+                   "description": "Integration with backend API's via POJO's, DAO's, Services and Circuit Breaker design pattern."
+                 },
+                 {
                        "name": "React",
-                       "description": "Lead the implementation of a React based user-generated-content and product details page <a href='https://www.thenetset.com/i/576433e16700003600d5f217'>Example page</a>.",
+                       "description": "Lead the implementation of a React based user-generated-content and product details page - <a href='https://www.thenetset.com/i/576433e16700003600d5f217'>Example page</a>.",
                        "tech": [
                              "Node.js",
                              "React.js",
@@ -63,13 +113,16 @@
                  },
                  {
                        "name": "Responsive SASS / Styling",
-                       "description": "Worked on various areas of the Mr.Porter site furniture, adding mobile-first responsive CSS for tablet and desktop versions.<br><br>Refactored javascript to updated best practises. ",
+                       "description": "Worked on various areas of the Mr.Porter site furniture, adding mobile-first responsive CSS for tablet and desktop versions.",
                        "tech": [
                              "Node.js",
                              "CSS",
                              "SASS",
                              "JavaScript"
                        ]
+                 },
+                 {
+                   "description": "Refactored javascript to updated best practises."
                  },
                  {
                        "name": "Ruby Automation",
@@ -80,25 +133,65 @@
                              "Capybara",
                              "Site Prism"
                        ]
+                 },
+                 {
+                   "description": "Won an internal hackday as part of a two man team by creating a staff discount notification service using Node.js and MongoDB."
+                 },
+                 {
+                   "description": "Came second in an internal hackday as part of a team by creating a temporary drag-and-drop shopping bag on the Mr Porter product listing page in vanilla JavaScript and jQuery."
                  }
+            ],
+            "tech": [
+              "Node.js",
+              "Scala",
+              "Java 7",
+              "ES6",
+              "JavaScript",
+              "Perl",
+              "SCSS",
+              "CSS",
+              "Perl",
+              "Ruby",
+              "Objective-C",
+              "Git",
+              "Unix",
+              "PostgreSQL",
+              "MongoDB",
+              "Cucumber",
+              "ActiveMQ"
             ]
           },
           {
-            "company": "Net-a-Porter",
-            "role": "Graduate Software Engineer",
-            "description": "Graduate Software Engineering Scheme based on rotations in Software Testing, Software Development and Dev Ops. Exposing me to various technologies, including Java, Perl, Scala, Ruby, JavaScript and iOS development.",
+            "company": "Thomson Reuters",
+            "role": "Junior Software Engineer",
+            "date": {
+              "start": "July 2012",
+              "end": "August 2013"
+            },
+            "description": "Year in industry focused on developing, implementing and maintaining tools in C++, C# and VBA to monitor and improve the Elektron Traffic Management System.",
             "projects": [
                  {
-                       "name": "Perl",
-                       "description": "Enhanced and maintained several core production backend applications in Perl 5 utilising PostgreSQL, DBIx and the Catalyst MVC Framework.",
-                       "tech": [
-                             "Perl",
-                             "Catalyst",
-                             "PostgreSQL"
-                       ]
+                       "description": "Created a desktop Windows application built in C# to replace a legacy application which would analyse server log files by passing data into an XML customisable analysis engine, and output graphs in XLSX format. Old version created the file in ~2 minutes, new version took 5-10 seconds."
+                 },
+                 {
+                       "description": "Created a desktop Windows application in C# which allowed server log file analysis based on XML customisable tests which could allow for inclusion/exclusion of user-defined errors, minimum/maximum timespan of server files, the number of errors and other user customisable settings. Features included built-in folder-recursive .tgz file extraction, and a built-in XML editor with code-folding and syntax highlighting."
+                 },
+                 {
+                       "description": "Worked on a C++ applciation which displayed real-time server information updatable at customisable intervals, and allowed for actions such as server state alteration, and pushing and pulling of files to the server remotely."
+                 },
+                 {
+                       "description": "Implemented and maintained several VBA scripts which connected to backend internal databases to automatically pull statistics and values to populate a Microsoft Spreadsheet - this data was plotted and analysed for use within the company."
                  }
+            ],
+            "tech": [
+              "C#",
+              "C++",
+              "PHP",
+              "VBA",
+              "Tortoise SVN",
+              "Windows",
+              "Linux"
             ]
           }
-
     ]
 }
