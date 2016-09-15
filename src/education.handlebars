@@ -7,31 +7,24 @@
     <div class="container full-height">
       <div class="row full-size-row">
         <div class="side-bar six columns">
-          <div class="blurb">
-            <div class="image">
-              <img src="images/avatar.png" />
+          <div class="eight columns">
+            <div class="blurb">
+              <div class="image">
+                <img src="images/avatar.png" />
+              </div>
+              <div class="details">
+                <h1>Chris Gregori</h1>
+                <h2>Full-Stack Software Engineer</h2>
+                <h3>
+                  <div class="type-wrap">
+                    <div id="typed-strings"></div>
+                    <span id="typed" style="white-space:pre;"></span>
+                  </div>
+                </h3>
+              </div>
             </div>
-            <div class="details">
-              <h1>Chris Gregori</h1>
-              <h2>Full-Stack Software Engineer</h2>
-              <h3>
-                <div class="type-wrap">
-                  <div id="typed-strings"></div>
-                  <span id="typed" style="white-space:pre;"></span>
-                </div>
-              </h3>
-            </div>
+            {{> links}}
           </div>
-          <div class="links">
-            <ul>
-              <li><a href="">Projects</a></li>
-              <li><a href="">Experience</a></li>
-              <li><a href="">Education</a></li>
-              <li><a href="">Photography</a></li>
-              <li><a href="">Blog</a></li>
-            </ul>
-          </div>
-
         </div>
         <div class="five columns content">
           {{> education}}

@@ -29,6 +29,10 @@ a {
   background: #f3f3f3;
   position: fixed;
   padding-left: 17%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: flex-start;
 
   .blurb {
     display: flex;
@@ -72,7 +76,7 @@ a {
   }
 
   .links {
-    width: 70%;
+    width: 72%;
     padding-top:30px;
 
     a {
