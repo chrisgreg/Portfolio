@@ -1,5 +1,4 @@
 $(function(){
-
     $("#typed").typed({
         strings: [
          "I am a full stack developer.",

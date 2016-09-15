@@ -1,0 +1,61 @@
+<div id="projects" class="primary-content projects">
+
+	<h1>Projects, Apps & Code</h1>
+  <div class="six columns">
+    <h2>Github Projects</h2>
+    <ul class="github-projects">
+    </ul>
+  </div>
+
+</div>
+
+
+<script>
+  var githubProjects = document.querySelector('.github-projects');
+  if (typeof(githubProjects) != 'undefined' && githubProjects != null){
+    populateGithubProjects();
+  }
+
+  function populateGithubProjects() {
+    const root = 'https://api.github.com';
+
+    fetch(root + '/users/chrisgreg/repos')
+      .then(getRepos)
+      .then(renderRepos);
+
+    function getRepos(response) {
+      return response.json().then((json) => {
+        var repos = formatRepos(json);
+        return repos;
+      })
+    }
+
+    function renderRepos(repos) {
+      for(var i = 0; i < repos.length; ++i) {
+        var element = document.createElement('li');
+        element.innerHTML = '<div><h4 class="title">' + repos[i].name + '</h4><div class="description">' + repos[i].description + '</div></div>';
+        githubProjects.appendChild(element);
+      }
+    }
+
+    function formatRepos(json) {
+      return json.map(repo => {
+        return {
+          id: repo.id,
+          created_date: repo.created_at,
+          url: repo.url,
+          description: repo.description,
+          name: repo.name,
+          stars: repo.stargazers_count,
+          watchers: repo.watchers
+        }
+      }).sort((a,b) => {
+        return new Date(b.created_date) - new Date(a.created_date);
+      })
+    }
+  }
+
+
+
+
+</script>
