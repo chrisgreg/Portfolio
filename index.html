@@ -48,11 +48,11 @@
           </div>
         </div>
         <div class="eight columns content">
-          <div id="projects" class="primary-content projects eight columns">
+          <div id="projects" class="primary-content projects nine columns">
           
           	<h1>Projects, Apps & Code</h1>
-            <div class="six columns">
-              <h2>Github Projects</h2>
+            <div>
+              <h2 class="github-projects-title">Github Projects</h2>
               <ul class="github-projects">
               </ul>
             </div>
@@ -71,7 +71,8 @@
           
               fetch(root + '/users/chrisgreg/repos')
                 .then(getRepos)
-                .then(renderRepos);
+                .then(renderRepos)
+          			.then(renderMetaData);
           
               function getRepos(response) {
                 return response.json().then((json) => {
@@ -83,31 +84,37 @@
               function renderRepos(repos) {
                 for(var i = 0; i < repos.length; ++i) {
                   var element = document.createElement('li');
-                  element.innerHTML = '<div><h4 class="title">' + repos[i].name + '</h4><div class="description">' + repos[i].description + '</div></div>';
+                  element.innerHTML = '<div class="github-project"><h4 class="title"><span>'
+          															+ repos[i].name + '</span></h4><div class="description">'
+          															+ repos[i].description + '</div><div class="stats"><div class="language">'+ repos[i].language+'</div><div class="stars">'+ repos[i].stars + ' stars</div><div class="url"><a href="'+ repos[i].url +'">Repository Link</a></div></div></div>';
                   githubProjects.appendChild(element);
                 }
+          			return repos;
               }
+          
+          		function renderMetaData(repos) {
+          			var githubProjectsTitle = document.querySelector('.github-projects-title');
+          			githubProjectsTitle.innerHTML = githubProjectsTitle.innerHTML + ' - ' + repos.length + ' projects';
+          
+          		}
           
               function formatRepos(json) {
                 return json.map(repo => {
                   return {
                     id: repo.id,
                     created_date: repo.created_at,
-                    url: repo.url,
-                    description: repo.description,
+                    url: repo.html_url,
+                    description: repo.description || 'No description available',
                     name: repo.name,
                     stars: repo.stargazers_count,
-                    watchers: repo.watchers
+                    watchers: repo.watchers,
+          					language: repo.language
                   }
                 }).sort((a,b) => {
                   return new Date(b.created_date) - new Date(a.created_date);
                 })
               }
             }
-          
-          
-          
-          
           </script>
         </div>
       </div>
