@@ -1,4 +1,6 @@
 
+$green: #71cd71;
+
 .container {
   &.full-height {
     height:100vh;
@@ -172,10 +174,39 @@ a {
       }
 
     }
+}
 
+.github-projects {
+  margin-top:20px;
+  list-style: none;
+  columns: 4;
+  column-gap: 100px;
 
+  li {
+    display: inline-block;
+    width: 100%;
+  }
 
+  .github-project {
 
+    margin-bottom: 40px;
+    width: 100%;
+
+    .title {
+      span {
+        border-bottom: 1px solid #71cd71;
+      }
+      margin-bottom: 0;
+      border: none;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      color: $green;
+      margin-top: 20px;
+    }
+  }
 }
 
 .education {
