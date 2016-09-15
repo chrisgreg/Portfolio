@@ -1,0 +1,27 @@
+<div id="photography" class="primary-content photography">
+  <h1>Photography</h1>
+
+  <div id="nanoGallery">
+   </div>
+
+</div>
+
+<script>
+$(document).ready(function () {
+  $("#nanoGallery").nanoGallery({
+    userID: '143093443@N07',
+    kind: 'flickr',
+
+    photoset: 'none',
+
+    thumbnailWidth: 'auto',
+      thumbnailHeight: 300,
+       colorScheme: 'none',
+      thumbnailGutterWidth : 20,
+      thumbnailGutterHeight : 20,
+    theme: 'light',
+    thumbnailLabel: { display:false, position:'overImageOnMiddle', align:'center' },
+    thumbnailLazyLoad: false
+  });
+});
+</script>
