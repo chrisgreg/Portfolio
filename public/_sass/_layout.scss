@@ -28,11 +28,6 @@ a {
   height: 100%;
   background: #f3f3f3;
   position: fixed;
-  padding-left: 17%;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  align-items: flex-start;
 
   .blurb {
     display: flex;
@@ -76,7 +71,7 @@ a {
   }
 
   .links {
-    width: 72%;
+    width: 100%;
     padding-top:30px;
 
     a {
@@ -109,12 +104,12 @@ a {
 }
 
 .content {
-  margin-left:50%;
+  margin-left:25%;
 }
 
 
 .primary-content {
-    padding-top:9%;
+    padding-top:5%;
 
     h1 {
       text-transform: uppercase;
