@@ -1,17 +1,19 @@
 {
-  "name": "modular-html-kit",
+  "name": "My Porfolio",
   "version": "1.0.0",
-  "description": "Modular HTML Kit using Gulp and Handlebars",
+  "description": "Chris Gregori's portfolio built using my Modular HTML Kit",
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/gulp/bin/gulp.js",
-    "watch": "./node_modules/gulp/bin/gulp.js watch"
+    "watch": "./node_modules/gulp/bin/gulp.js watch",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [
     "gulp",
     "handlebars",
     "html",
-    "modular"
+    "modular",
+    "javascript"
   ],
   "author": "Chris Gregori",
   "license": "ISC",
