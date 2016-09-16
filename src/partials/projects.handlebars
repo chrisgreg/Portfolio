@@ -1,9 +1,24 @@
 <div id="projects" class="primary-content projects ten columns">
 
 	<h1>Projects, Apps & Code</h1>
-  <div>
-    <h3 class="github-projects-title">Github Projects</h3>
-    <ul class="github-projects">
+
+	<!-- Apps -->
+	<div>
+    <h3 class="sites-and-apps-title subtitle">Sites & Apps</h3>
+    <ul class="sites-and-apps-projects apps">
+			{{#projects}}
+				<div class="project">
+					<h4 class="title"><span>{{this.name}} - {{this.type}}</span> - <a href="{{this.url}}">Link</a></h4>
+					<div class="description">{{{this.description}}}</div>
+				</div>
+			{{/projects}}
+    </ul>
+  </div>
+
+	<!-- Github -->
+	<div>
+    <h3 class="github-projects-title subtitle">Github Projects</h3>
+    <ul class="github-projects apps">
     </ul>
   </div>
 
@@ -35,7 +50,7 @@
     function renderRepos(repos) {
       for(var i = 0; i < repos.length; ++i) {
         var element = document.createElement('li');
-        element.innerHTML = '<div class="github-project"><h4 class="title"><span>'
+        element.innerHTML = '<div class="project"><h4 class="title"><span>'
 															+ repos[i].name + '</span></h4><div class="description">'
 															+ repos[i].description + '</div><div class="stats"><div class="language">'+ repos[i].language+'</div><div class="stars">'+ repos[i].stars + ' stars</div><div class="url"><a href="'+ repos[i].url +'">Repository Link</a></div></div></div>';
         githubProjects.appendChild(element);

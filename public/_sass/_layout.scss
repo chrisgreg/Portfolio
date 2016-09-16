@@ -199,13 +199,14 @@ a {
     }
 }
 
-.github-projects-title {
+.subtitle {
   text-transform: uppercase;
   letter-spacing: 2px;
   padding-top: 25px;
   margin-bottom: 35px;
 }
-.github-projects {
+
+.apps {
   margin-top:20px;
   list-style: none;
   columns: 3;
@@ -216,7 +217,14 @@ a {
     width: 100%;
   }
 
-  .github-project {
+  &.sites-and-apps-projects {
+    columns: inherit;
+    .project {
+      width: 90%;
+    }
+  }
+
+  .project {
 
     margin-bottom: 40px;
     width: 100%;
