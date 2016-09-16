@@ -31,6 +31,11 @@ a {
   background: #f3f3f3;
   position: fixed;
 
+  .about {
+    margin: 0 auto;
+    padding: 0 10% 0 10%;
+  }
+
   .blurb {
     display: flex;
     padding-top:50px;
