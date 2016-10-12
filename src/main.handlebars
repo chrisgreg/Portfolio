@@ -6,7 +6,7 @@
   <body>
     <div class="container full-height">
       <div class="row full-size-row">
-        <div class="side-bar four columns">
+        <div class="side-bar twelve columns">
           <div>
             <div class="blurb">
               <div class="image">
@@ -23,17 +23,19 @@
                 </h3>
               </div>
             </div>
-            {{> links}}
           </div>
           <div class="about">
+            <ul>
+              <li>Projects</li>
+              <li>Education</li>
+              <li>Experience</li>
+              <li>Photography</li>
+            </ul>
             {{{about}}}
           </div>
           <div>
             {{> socialmedia}}
           </div>
-        </div>
-        <div class="eight columns content">
-          {{> projects}}
         </div>
       </div>
 

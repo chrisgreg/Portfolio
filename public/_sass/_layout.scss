@@ -12,6 +12,12 @@ $green: #71cd71;
   height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
 a:hover {
     color: #05a805;
     text-decoration: underline;
@@ -32,8 +38,8 @@ a {
   position: fixed;
 
   .about {
-    margin: 0 auto;
-    padding: 0 10% 0 10%;
+    padding: 40px 0px 80px 0px;
+    width: 33%;
   }
 
   .blurb {
@@ -55,7 +61,7 @@ a {
       padding-left:20px;
 
       h1 {
-        font-size: 2.3rem;
+        font-size: 4.3rem;
         padding-top: 5px;
         letter-spacing: 1px;
         color: #6d6d6d;
@@ -274,5 +280,15 @@ a {
         width: 100%;
       }
     }
+  }
+}
+
+.linkboxes {
+  li {
+    background: #000;
+    float: left;
+    height: 24vw;
+    margin: 1%;
+    width: 23%;
   }
 }
