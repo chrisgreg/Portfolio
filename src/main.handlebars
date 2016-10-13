@@ -24,14 +24,68 @@
               </div>
             </div>
           </div>
-          <div class="about">
-            <ul>
-              <li>Projects</li>
-              <li>Education</li>
-              <li>Experience</li>
-              <li>Photography</li>
-            </ul>
-            {{{about}}}
+          <div class="main-info">
+            <div class="about">
+              <div class="sub-area">
+                <h3>Experience</h3>
+                <ul>
+                  {{#work}}
+                    <li>
+                      <h5 class="with-sub-heading">{{this.company}} - {{this.role}}</h5>
+                      <h6><b>{{this.date.start}} - {{this.date.end}}</b></h6>
+                    </li>
+                  {{/work}}
+                  <li>
+                    <h5><a href="education.html">More Information</a></h5>
+                  </li>
+                </ul>
+              </div>
+              <div class="sub-area">
+                <h3>Education</h3>
+                <ul>
+                  <li>
+                    <h5 class="with-sub-heading">Software Engineering BSc</h5>
+                    <h6>1st Class Honours - City University London</h6>
+                  </li>
+                  <li>
+                    <h5><a href="education.html">More Information</a></h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="about">
+              <div class="sub-area">
+                <h3>Projects</h3>
+                <ul>
+                  <li>
+                    <h5><a href="">Sites, Apps & Code</a></h5>
+                  </li>
+                  <li>
+                    <h5 class="github-projects-title">Github Projects - 0</h5>
+                    <ul class="github-projects">
+
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="sub-area">
+                <h3>Photography</h3>
+                <ul>
+                  <li>
+                    <h5><a href="{{social.flickr}}">Flickr</a></h5>
+                  </li>
+                  <li>
+                    <h5><a href="{{social.instagram}}">Instagram</a></h5>
+                  </li>
+                  <li>
+                    <h5><a href="{{social.society6}}">Society6</a></h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div>
             {{> socialmedia}}
@@ -42,5 +96,58 @@
 
     </div>
   </body>
+
+  <script>
+    var githubProjects = document.querySelector('.github-projects-title');
+    if (typeof(githubProjects) != 'undefined' && githubProjects != null){
+      populateGithubProjects();
+    }
+
+    function populateGithubProjects() {
+      const root = 'https://api.github.com';
+
+      fetch(root + '/users/chrisgreg/repos')
+        .then(getRepos)
+  			.then(renderMetaData)
+        .then(getLanguageStats);
+
+      function getRepos(response) {
+        return response.json().then((json) => {
+          var repos = formatRepos(json);
+          return repos;
+        })
+      }
+
+      function renderMetaData(repos) {
+        var githubProjectsTitle = document.querySelector('.github-projects-title');
+        githubProjectsTitle.innerHTML = 'Github Projects - ' + repos.length;
+        return repos;
+      }
+
+      function getLanguageStats(repos) {
+        var languages = Object.keys(repos).map(a => repos[a].language)
+        var languageOccurances = new Map([...new Set(languages)].map(
+          x => [x, languages.filter(y => y === x).length]
+        ));
+      }
+
+      function formatRepos(json) {
+        return json.map(repo => {
+          return {
+            id: repo.id,
+            created_date: repo.created_at,
+            url: repo.html_url,
+            description: repo.description || 'No description available',
+            name: repo.name,
+            stars: repo.stargazers_count,
+            watchers: repo.watchers,
+            language: repo.language
+          }
+        }).sort((a,b) => {
+          return new Date(b.created_date) - new Date(a.created_date);
+        })
+      }
+    }
+</script>
 
 </html>

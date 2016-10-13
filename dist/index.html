@@ -40,20 +40,80 @@
               </div>
             </div>
           </div>
-          <div class="about">
-            <ul>
-              <li>Projects</li>
-              <li>Education</li>
-              <li>Experience</li>
-              <li>Photography</li>
-            </ul>
-            Current work is based on presentational layers for e-commerce applications at NET-A-PORTER primarily utilising Node.js and React.<br><br>I'm also a very amateur photographer - you can find my shots here, on my flickr or buy them from <a href='https://society6.com/chrisgregori'>Society6</a>.<br><br>Get in contact with me below.
+          <div class="main-info">
+            <div class="about">
+              <div class="sub-area">
+                <h3>Experience</h3>
+                <ul>
+                    <li>
+                      <h5 class="with-sub-heading">Net-a-Porter - Associate Software Engineer</h5>
+                      <h6><b>November 2015 - ...</b></h6>
+                    </li>
+                    <li>
+                      <h5 class="with-sub-heading">Net-a-Porter - Graduate Software Engineer</h5>
+                      <h6><b>September 2014 - November 2015</b></h6>
+                    </li>
+                    <li>
+                      <h5 class="with-sub-heading">Thomson Reuters - Junior Software Engineer</h5>
+                      <h6><b>July 2012 - August 2013</b></h6>
+                    </li>
+                  <li>
+                    <h5><a href="education.html">More Information</a></h5>
+                  </li>
+                </ul>
+              </div>
+              <div class="sub-area">
+                <h3>Education</h3>
+                <ul>
+                  <li>
+                    <h5 class="with-sub-heading">Software Engineering BSc</h5>
+                    <h6>1st Class Honours - City University London</h6>
+                  </li>
+                  <li>
+                    <h5><a href="education.html">More Information</a></h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="about">
+              <div class="sub-area">
+                <h3>Projects</h3>
+                <ul>
+                  <li>
+                    <h5><a href="">Sites, Apps & Code</a></h5>
+                  </li>
+                  <li>
+                    <h5 class="github-projects-title">Github Projects - 0</h5>
+                    <ul class="github-projects">
+
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="sub-area">
+                <h3>Photography</h3>
+                <ul>
+                  <li>
+                    <h5><a href="https://www.flickr.com/photos/143093443@N07/">Flickr</a></h5>
+                  </li>
+                  <li>
+                    <h5><a href="https://www.instagram.com/chrisgregori__/">Instagram</a></h5>
+                  </li>
+                  <li>
+                    <h5><a href="https://society6.com/chrisgregori">Society6</a></h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div>
             <ul class="social-media">
               <li><a href=mailto:chrisgreg23@googlemail.com><img src="images/svg-icons/57-outlook.svg"></a></li>
               <li><a href=http://www.github.com/chrisgreg><img src="images/svg-icons/41-github.svg"></a></li>
-              <li><a href=https://www.instagram.com/chrisgregori__/><img src="images/svg-icons/04-flickr.svg"></a></li>
+              <li><a href=https://www.flickr.com/photos/143093443@N07/><img src="images/svg-icons/04-flickr.svg"></a></li>
               <li><a href=http://www.twitter.com/@_ChrisGreg><img src="images/svg-icons/03-twitter.svg"></a></li>
               <li><a href=https://www.linkedin.com/in/chrisgregori><img src="images/svg-icons/11-linkedin.svg"></a></li>
               <li><a href=https://www.facebook.com/chris.gregori.9><img src="images/svg-icons/06-facebook.svg"></a></li>
@@ -68,5 +128,58 @@
 
     </div>
   </body>
+
+  <script>
+    var githubProjects = document.querySelector('.github-projects-title');
+    if (typeof(githubProjects) != 'undefined' && githubProjects != null){
+      populateGithubProjects();
+    }
+
+    function populateGithubProjects() {
+      const root = 'https://api.github.com';
+
+      fetch(root + '/users/chrisgreg/repos')
+        .then(getRepos)
+  			.then(renderMetaData)
+        .then(getLanguageStats);
+
+      function getRepos(response) {
+        return response.json().then((json) => {
+          var repos = formatRepos(json);
+          return repos;
+        })
+      }
+
+      function renderMetaData(repos) {
+        var githubProjectsTitle = document.querySelector('.github-projects-title');
+        githubProjectsTitle.innerHTML = 'Github Projects - ' + repos.length;
+        return repos;
+      }
+
+      function getLanguageStats(repos) {
+        var languages = Object.keys(repos).map(a => repos[a].language)
+        var languageOccurances = new Map([...new Set(languages)].map(
+          x => [x, languages.filter(y => y === x).length]
+        ));
+      }
+
+      function formatRepos(json) {
+        return json.map(repo => {
+          return {
+            id: repo.id,
+            created_date: repo.created_at,
+            url: repo.html_url,
+            description: repo.description || 'No description available',
+            name: repo.name,
+            stars: repo.stargazers_count,
+            watchers: repo.watchers,
+            language: repo.language
+          }
+        }).sort((a,b) => {
+          return new Date(b.created_date) - new Date(a.created_date);
+        })
+      }
+    }
+</script>
 
 </html>
