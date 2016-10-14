@@ -1,11 +1,6 @@
 
 $green: #71cd71;
 
-@media (max-width: 600px) {
-    .side-bar {
-      background: red;
-    }
-}
 
 .container {
   &.full-height {
@@ -343,4 +338,56 @@ a {
     margin: 1%;
     width: 23%;
   }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+      padding: 0 !important;
+    }
+
+    .links {
+      flex-direction: column;
+      text-align: center;
+      a {
+        padding: 3px;
+      }
+    }
+
+    .apps {
+      columns: 1;
+      .project {
+          width: 100% !important;
+      }
+    }
+
+    .main-info {
+      flex-direction: column !important;
+      margin-top: 45px !important;
+    }
+
+    .sub-area {
+      min-height: 100px !important;
+      margin-bottom: 50px;
+    }
+
+    .container.full-height{
+        height: 100% !important;
+    }
+
+    .blurb {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 30px !important;
+    }
+
+    .primary-content {
+      h1 {
+        margin-right: 0 !important;
+      }
+      padding: 30px;
+      padding-top: 40px !important;
+      text-align: center;
+    }
 }
