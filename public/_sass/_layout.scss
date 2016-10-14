@@ -1,6 +1,12 @@
 
 $green: #71cd71;
 
+@media (max-width: 600px) {
+    .side-bar {
+      background: red;
+    }
+}
+
 .container {
   &.full-height {
     height:100vh;
@@ -28,6 +34,14 @@ a {
     text-decoration: none;
 }
 
+.links {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 7%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .side-bar {
   display: flex;
   flex-direction: column;
@@ -39,7 +53,7 @@ a {
   .main-info {
     display: flex;
     flex-direction: row;
-    margin-top:45px;
+    margin-top:70px;
   }
 
   .about {
@@ -53,7 +67,7 @@ a {
     }
 
     .sub-area {
-      min-height: 200px;
+      min-height: 315px;
       margin-right: 30px;
       margin-left: 30px;
     }
@@ -65,7 +79,7 @@ a {
       font-weight: 400;
     }
     h5 {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       letter-spacing: 1px;
       text-transform: uppercase;
 
@@ -74,7 +88,7 @@ a {
       }
     }
     h6 {
-      font-size: 1.0rem;
+      font-size: 1.3rem;
       font-weight: 400px;
       letter-spacing: 1px;
     }
@@ -82,7 +96,7 @@ a {
 
   .blurb {
     display: flex;
-    padding-top:50px;
+    padding-top:100px;
 
     .image {
       img {
@@ -178,7 +192,7 @@ a {
 
 
 .primary-content {
-    padding-top:6%;
+    padding-top:80px;
 
     h1 {
       text-transform: uppercase;
@@ -235,7 +249,7 @@ a {
       li {
         margin-bottom: 0;
         p {
-          font-size: 1.3rem;
+          font-size: 1.4rem;
           margin-bottom: 0;
         }
       }
@@ -253,8 +267,8 @@ a {
 .apps {
   margin-top:20px;
   list-style: none;
-  columns: 3;
-  column-gap: 40px;
+  columns: 2;
+  column-gap: 75px;
 
   li {
     display: inline-block;
