@@ -58,7 +58,7 @@
                       <h6><b>July 2012 - August 2013</b></h6>
                     </li>
                   <li>
-                    <h5><a href="education.html">More Information</a></h5>
+                    <h5><a href="experience.html">More Information</a></h5>
                   </li>
                 </ul>
               </div>
@@ -67,7 +67,7 @@
                 <ul>
                   <li>
                     <h5 class="with-sub-heading">Software Engineering BSc</h5>
-                    <h6>1st Class Honours - City University London</h6>
+                    <h6><b>1st Class Honours - City University London</b></h6>
                   </li>
                   <li>
                     <h5><a href="education.html">More Information</a></h5>
@@ -81,7 +81,7 @@
                 <h3>Projects</h3>
                 <ul>
                   <li>
-                    <h5><a href="">Sites, Apps & Code</a></h5>
+                    <h5><a href="projects.html">Sites, Apps & Code</a></h5>
                   </li>
                   <li>
                     <h5 class="github-projects-title">Github Projects - 0</h5>
@@ -152,15 +152,24 @@
 
       function renderMetaData(repos) {
         var githubProjectsTitle = document.querySelector('.github-projects-title');
-        githubProjectsTitle.innerHTML = 'Github Projects - ' + repos.length;
+        githubProjectsTitle.innerHTML = 'Github Projects - <a href="http://www.github.com/chrisgreg">' + repos.length + '</a>';
         return repos;
       }
 
       function getLanguageStats(repos) {
+        var projects = document.querySelector('.github-projects');
         var languages = Object.keys(repos).map(a => repos[a].language)
         var languageOccurances = new Map([...new Set(languages)].map(
           x => [x, languages.filter(y => y === x).length]
         ));
+
+        languageOccurances.forEach((a,b) => {
+          let occurance = a;
+          let language = b;
+          var element = document.createElement('h6');
+          element.innerHTML = `<b>${language}:</b> ${occurance}`;
+          projects.appendChild(element);
+        })
       }
 
       function formatRepos(json) {
@@ -175,9 +184,7 @@
             watchers: repo.watchers,
             language: repo.language
           }
-        }).sort((a,b) => {
-          return new Date(b.created_date) - new Date(a.created_date);
-        })
+        });
       }
     }
 </script>
