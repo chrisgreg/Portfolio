@@ -31,12 +31,12 @@
                 <ul>
                   {{#work}}
                     <li>
-                      <h5 class="with-sub-heading">{{this.company}} - {{this.role}}</h5>
-                      <h6><b>{{this.date.start}} - {{this.date.end}}</b></h6>
+                      <p class="with-sub-heading">{{this.company}} - {{this.role}}</p>
+                      <p><b>{{this.date.start}} - {{this.date.end}}</b></p>
                     </li>
                   {{/work}}
                   <li>
-                    <h5><a href="experience.html">More Information</a></h5>
+                    <p><a href="experience.html">More Information</a></p>
                   </li>
                 </ul>
               </div>
@@ -44,11 +44,11 @@
                 <h3>Education</h3>
                 <ul>
                   <li>
-                    <h5 class="with-sub-heading">Software Engineering BSc</h5>
-                    <h6><b>1st Class Honours - City University London</b></h6>
+                    <p class="with-sub-heading">Software Engineering BSc</p>
+                    <p><b>1st Class Honours - City University London</b></p>
                   </li>
                   <li>
-                    <h5><a href="education.html">More Information</a></h5>
+                    <p><a href="education.html">More Information</a></p>
                   </li>
                 </ul>
               </div>
@@ -59,10 +59,10 @@
                 <h3>Projects</h3>
                 <ul>
                   <li>
-                    <h5><a href="projects.html">Sites, Apps & Code</a></h5>
+                    <p><a href="projects.html">Sites, Apps & Code</a></p>
                   </li>
                   <li>
-                    <h5 class="github-projects-title">Github Projects - 0</h5>
+                    <p class="github-projects-title">Github Projects - 0</p>
                     <ul class="github-projects">
 
                     </ul>
@@ -75,13 +75,13 @@
                 <h3>Photography</h3>
                 <ul>
                   <li>
-                    <h5><a href="{{social.flickr}}">Flickr</a></h5>
+                    <p><a href="{{social.flickr}}">Flickr</a></p>
                   </li>
                   <li>
-                    <h5><a href="{{social.instagram}}">Instagram</a></h5>
+                    <p><a href="{{social.instagram}}">Instagram</a></p>
                   </li>
                   <li>
-                    <h5><a href="{{social.society6}}">Society6</a></h5>
+                    <p><a href="{{social.society6}}">Society6</a></p>
                   </li>
                 </ul>
               </div>
@@ -134,7 +134,7 @@
         languageOccurances.forEach((a,b) => {
           let occurance = a;
           let language = b;
-          var element = document.createElement('h6');
+          var element = document.createElement('p');
           element.innerHTML = `<b>${language}:</b> ${occurance}`;
           projects.appendChild(element);
         })
