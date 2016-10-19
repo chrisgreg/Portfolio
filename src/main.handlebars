@@ -92,12 +92,11 @@
           </div>
         </div>
       </div>
-
-
     </div>
+    {{> cssref}}
   </body>
 
-  <script>
+  <script async>
     var githubProjects = document.querySelector('.github-projects-title');
     if (typeof(githubProjects) != 'undefined' && githubProjects != null){
       populateGithubProjects();
