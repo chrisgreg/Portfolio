@@ -390,6 +390,10 @@ a {
       flex-direction: column;
       text-align: center;
       padding-top: 30px !important;
+
+      .details {
+        padding-left: 0 !important; 
+      }
     }
 
     .primary-content {
